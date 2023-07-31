@@ -35,6 +35,10 @@ Returns no of remaining (unsolved) questions.
 
 Returns the list of all the completed questions. 
 
+* `./lc-helper.sh get-completed-count`
+
+Returns the number of completed questions. 
+
 ### Usage
 
 Just download both the `lc-helper.sh` and `questions.txt` file locally in the same folder and you are done!
