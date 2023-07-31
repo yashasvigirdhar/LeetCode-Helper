@@ -21,6 +21,7 @@ function show_usage (){
   	printf "  get, Gets a new unsolved question\n"
   	printf "  mark-completed <leetcode link>, Marks a question as completed\n"
   	printf "  get-completed, Gets all the completed questions\n"
+	printf "  get-completed-count, Gets the number of completed questions\n"
 	printf "  get-remaining-count, Gets the number of remaining questions\n"
 	printf "  help, Prints this help text\n"
 
@@ -42,6 +43,11 @@ function mark_completed() {
 function get_completed() {
 	echo "All completed questions:"
 	grep ^# questions.txt | sed 's/#//'
+}
+
+function get_completed_count() {
+	echo "Number of completed questions:"
+	grep ^# questions.txt | wc -l
 }
 
 function get_remaining_count() {
@@ -70,6 +76,9 @@ then
 elif [[ "$1" == "get-remaining-count" ]]
 then
 	get_remaining_count
+elif [[ "$1" == "get-completed-count" ]]
+then
+	get_completed_count
 else
 	echo "Incorrect input provided"
 	show_usage
