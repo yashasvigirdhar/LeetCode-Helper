@@ -27,8 +27,6 @@ Returns a new random question from the remaining unsolved questions. This would 
 
 Marks a question as completed. This would make sure this question is not considered in subsequent `get` calls. 
 
-Returns no of remaining (unsolved) questions.
-
 * `./lc-helper.sh get-remaining-count`
 
 Returns no of remaining (unsolved) questions.
