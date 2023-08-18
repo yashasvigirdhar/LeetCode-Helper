@@ -30,7 +30,7 @@ function show_usage (){
 
 function get_new() {
 	echo "Getting a new question for you"
-  	grep -v ^# questions.txt | sort -R | head -n 1
+	open $(grep -v ^# questions.txt | sort -R | head -n 1)
   	return 0;
 }
 
